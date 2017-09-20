@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1. 
 By Shady Yahia
 
-##For running the application in production mode, please do the following steps:
+## For running the application in production mode, please do the following steps:
 
 1- Make sure that you have NodeJS installed on your machine.
 2- Extract dist folder into a folder and name it any name, Ex: "Folder1".
@@ -13,7 +13,7 @@ By Shady Yahia
 
 This last command will serve all the files in your folder. you can check the terminal what ip-address and port you can use to access the application. Now open up your browser and type ip-adress:port/index.html
 
-##For running the application in development mode:
+## For running the application in development mode:
 1- Run npm install in the tlProject folder.
 2- Run ng build in the same folder and make sure that build succeeded.
 3- Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
