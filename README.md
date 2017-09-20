@@ -34,3 +34,35 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
+## Features:
+1- Welcome screen 
+2- Quick search for searching for talents and groups in the same search box.
+3- All talents in one  list , All Groups in one list from the top navigation bar.
+4- Delete talent or a group.
+5- Adding new talent or a group.
+6- Validation if a group has at least one talent , it can't be deleted.
+7- A New Group must have at least one talent before creating it.
+8- Validation for Form input
+9- Help tooltip.
+10- Confirmation message before deleting talent/group.
+
+
+## What's good about the application:
+1- It is a master piece for Angular 2 along with Angular CLI frameworks
+2- Perfect data synchronization between talents and groups.Data updated every where tightly.
+3- All tests ran successfully using Jasmine and Karma frameworks including the end-to-end test.
+4- Fancy and friendly UI for usability.
+5- Responsive UI( responsive navigation bar, and content )
+6- A Splash screen in the introduction.
+7- Light weight client code which was minified and bundled for security and easy deployment.( using Angular CLI )
+8- Testable and easy to maintain.
+
+
+## Things to be improved in the future and they are easy to be done :
+1- Confirmation messages to be done using bootstrap-confirmation library instead of the native JS support.
+2- Coloring enhancement. a significant time was spent while choosing the colors.
+3- Creating a reusable  angular component for the User/Group card.
+4- Search result component has more smooth animation.
+
+
+
