@@ -1,0 +1,22 @@
+<div  *ngIf="groups?.length > 0" [@myAnimation1] id="groupsDd">
+    
+    <h1 class="componentHeader" *ngIf="!filterStr"><span class="label label-info">All Groups</span></h1>
+    <div class="containerDivv" id="containerDivv1">
+        <div *ngFor="let t of groups" class="searchUser rain searchUserInGroup" [id]="t.id">
+
+            <button type="button" data-toggle="confirmation" data-id="removeBtn{{t.id}}" class="glyphicon glyphicon-remove-sign removeFromGroup" title="Remove Group" (click)="removeGroup($event,t.id)"></button>
+            <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.logo + ') no-repeat'}">
+                <div class="wrapper">
+                    <h1 class="heading">{{t.name}}</h1>
+                    <h3 class="location">({{t.memberCount}}) members</h3>
+                    <p class="temp">
+                        <a (click)="openDetails(t)" class="smallLink">details</a>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<h1 *ngIf="groups?.length == 0 && !filterStr" class="componentHeader">No Talent Groups for now :( </h1>
+<app-group-details #groupDetails *ngIf="_talentSrv.storage && selectedGroup"  [group]="selectedGroup"></app-group-details>

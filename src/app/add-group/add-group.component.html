@@ -1,0 +1,56 @@
+<div class="modal fade" id="AddGroupDialog" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header addNewDialogHeader">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="profileName">Add New Group</h1>
+            </div>
+            <form class="form-horizontal" data-toggle="validator" id="formGroup1">
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="USERNAME">Group Name</label>
+                        <div class="col-md-4">
+                            <input id="groupDiv" data-validate="true" name="groupDiv" type="text" placeholder="" [(ngModel)]="name" class="form-control input-md" required />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="userPic">Logo</label>
+                        <div class="col-md-4">
+                            <input id="logoDiv" type="file" name="logoDiv" accept="image/*" (change)="fileEvent($event)" class="form-control input-md" required />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div *ngIf="talents?.length > 0" >
+                        <h3>Please choose at least one member..</h3>
+                        <div *ngFor="let t of talents" class="searchUser rain searchUserInGroup" id="talentDiv_{{t.id}}">
+                            <button type="button" class="glyphicon glyphicon-ok-circle addToGroup" [ngClass]="t.selected?'OkGreen':'OkBlack'" (click)="selectClicked($event,t)" title="Make it green and add to the group!"></button>
+                            <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
+                                <div class="wrapper">
+                                    <h1 class="heading">{{t.name}}</h1>
+                                    <h3 class="location">ID:{{t.id}}</h3>
+                                    <p class="temp">
+                                        <span class="temp-value">{{t.rating}}</span>
+                                        <img src="../assets/img/star3.png" class="starIcon">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" id="button1id" name="button1id" class="btn btn-success pull-left" (click)="addNewGroup()" value="Create Group" />
+                    <button class="btn btn-danger btn-default pull-left" (click)="clearUI()" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                    <p>Need <a data-toggle="popover" title="Help" data-content="For any inquiry, please contact shady.yehia84@gmail.com">help?</a></p>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

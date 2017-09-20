@@ -1,0 +1,77 @@
+.buttonSr {
+ border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    transition: all 0.5s;
+    /* cursor: pointer; */
+    margin-left: 5px;
+    
+}
+.searchtxtBox {
+        border-color: pink;
+}
+
+.buttonSr span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#searchBtn.buttonSr {
+width:90px;
+}
+#searchBtn.buttonSr span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#searchBtn.buttonSr:hover span {
+  padding-right: 25px;
+}
+
+#searchBtn.buttonSr:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.spacing {
+    margin-right: 20px;
+    margin-top: 10px;
+    background: #f4511e;
+}
+.addBtns {
+    padding: 5px;
+    transition:All 0s;
+    margin-left: 0px; 
+    margin-top:20px;
+}
+
+.addBtns:nth-child(2) {
+    margin-left:20px;
+}
+.addBtnContainer {
+    float:left;
+}
+    .addBtns:hover {
+        color: #f4511e !important;
+        background-color: #fff !important;
+        transition:All 0s;
+    }
+#titleDiv,form  {
+      max-width: 40em;
+    margin: 0 auto;
+}
+
+
+  
+
+

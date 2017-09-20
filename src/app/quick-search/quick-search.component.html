@@ -1,0 +1,26 @@
+<div class="jumbotron text-center" id="searchHeader">
+
+    <div id="titleDiv" class="shake"><h1>Talent Expats</h1>
+    <p>Be a talent expat, with us you blow it away! </p>
+    </div>
+    <form class="form">
+        <div class="input-group">
+            <input [(ngModel)]="filterStr" name="searchTxtBox" type="search" class="form-control searchtxtBox" size="50" (keyup.enter)="searchResult()" placeholder="Talents, group of talents (Press Enter) .." required>
+            <div class="input-group-btn">
+                <button type="button" id="searchBtn" class="buttonSr" (click)="searchResult()"><span>Search</span></button>
+            </div>
+        </div>
+        <div class="addBtnContainer">
+            <button class="buttonSr addBtns" type="button" onclick="$('#AddUserDialog').modal('show');">
+                <span class="glyphicon glyphicon-plus-sign"></span> Add New Talent
+            </button>
+
+            <button class="buttonSr addBtns" type="button" onclick="$('#AddGroupDialog').modal('show');">
+                <span class="glyphicon glyphicon-plus-sign"></span> Add New Group
+            </button>
+        </div>
+    </form>
+
+
+</div>
+

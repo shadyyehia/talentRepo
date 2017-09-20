@@ -1,0 +1,68 @@
+<div class="modal fade" id="AddUserDialog" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header addNewDialogHeader">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h1 class="profileName">Add New Talent</h1>
+            </div>
+            <form class="form-horizontal" id="formTalent1" data-toggle="validator" >
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="USERNAME">Talent Name</label>
+                        <div class="col-md-4">
+                            <input id="tlname"  data-validate="true" name="tlname" type="text" placeholder="" [(ngModel)]="name" class="form-control input-md" required />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="USERNAME">ID</label>
+                        <div class="col-md-4">
+                            <input id="tlid" data-validate="true" name="tlid" type="text" placeholder="" [(ngModel)]="id" class="form-control input-md" required />
+                            <div class="help-block with-errors"></div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="USERNAME">Rating</label>
+                        <div class="col-md-4">
+                            <input id="tlRating" data-validate="true" type="number" min="1" max="5" data-error="Please fill it out in range (1-5)" name="tlRating"  placeholder="" [(ngModel)]="rating" class="form-control input-md" required />
+                            <div class="help-block with-errors"></div>
+
+                        </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label" for="userPic">Talent Picture</label>
+                        <div class="col-md-4">
+                            <input id="tlPic" type="file" name="tlPic" accept="image/*" (change)="fileEvent($event)" class="form-control input-md" required />
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div *ngIf="groups?.length > 0">
+                        <h3 >Suggested groups to join..</h3>
+                        <div *ngFor="let t of groups" class="searchUser rain searchUserInGroup" [id]="t.id">
+                            <button type="button" class="glyphicon glyphicon-ok-circle addToGroup" [ngClass]="t.selected?'OkGreen':'OkBlack'" (click)="selectClicked($event,t)" title="Make it green and add the user to the group!"></button>
+                            <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.logo + ') no-repeat'}">
+                                <div class="wrapper">
+                                    <h1 class="heading">{{t.name}}</h1>
+                                    <h3 class="location">({{t.memberCount}}) members</h3>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    
+                    <input type="submit" id="button1id" name="button1id" class="btn btn-success pull-left" (click)="addNewTalent()" value="Create Talent" />
+                    <button class="btn btn-danger btn-default pull-left" (click)="clearUI()" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                    <p>Need <a data-toggle="popover" title="Help"  data-content="For any inquiry, please contact shady.yehia84@gmail.com">help?</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

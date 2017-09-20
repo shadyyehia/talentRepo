@@ -1,0 +1,427 @@
+
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css";
+
+ body {
+      font: 400 15px Lato, sans-serif;
+      /* line-height: 1.8; */
+      color: #818181;
+       background: linear-gradient(to right, rgba(255,0,0,0), #f2c1c1); 
+  }
+
+  h2 {
+      font-size: 24px;  
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+
+  h4 {
+      font-size: 19px;
+      /* line-height: 1.375em; */
+      color: #303030;
+      font-weight: 400;
+  }  
+  .jumbotron {
+      background-color: #71b3e8;
+      color: #fff;
+      padding: 120px ;
+      font-family: Montserrat, sans-serif;
+  }
+ 
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  
+
+
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 3px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+  
+
+
+.searchUser .top {
+  position: relative;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  background: url("https://s-media-cache-ak0.pinimg.com/564x/cf/1e/c4/cf1ec4b0c96e59657a46867a91bb0d1e.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;  
+}
+.searchUser .top .wrapper {
+      padding: 70px 10px 10px 10px;
+  position: relative;
+  z-index: 1;
+}
+.searchUser .top .wrapper .mynav {
+  height: 20px;
+}
+.searchUser .top .wrapper .mynav .lnr {
+  color: #fff;
+  font-size: 20px;
+}
+.searchUser .top .wrapper .mynav .lnr-chevron-left {
+  display: inline-block;
+  float: left;
+}
+.searchUser .top .wrapper .mynav .lnr-cog {
+  display: inline-block;
+  float: right;
+}
+.searchUser .top .wrapper .heading {
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+}
+.searchUser .top .wrapper .location {
+  margin-top: 15px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #fff;
+}
+.searchUser .top .wrapper .temp {
+  /* margin-top: 10px; */
+}
+.searchUser .top .wrapper .temp a {
+ 
+  color: #fff;
+}
+.searchUser .top .wrapper .temp a .temp-type {
+  font-size: 85px;
+}
+.searchUser .top .wrapper .temp .temp-value {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+}
+.searchUser .top .wrapper .temp .deg {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+  vertical-align: top;
+  margin-top: 10px;
+}
+.searchUser .top:after {
+    content:'';
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.searchUser .bottom {
+  padding: 0 30px;
+  background: #fff;
+}
+.searchUser .bottom .wrapper .forecast {
+  overflow: hidden;
+  margin: 0;
+  font-size: 0;
+  padding: 0;
+  padding-top: 20px;
+  max-height: 155px;
+}
+.searchUser .bottom .wrapper .forecast a {
+  text-decoration: none;
+  color: #000;
+}
+.searchUser .bottom .wrapper .forecast .go-up {
+  text-align: center;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.searchUser .bottom .wrapper .forecast li {
+  display: block;
+  font-size: 25px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.25);
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+.searchUser .bottom .wrapper .forecast li .date {
+  display: inline-block;
+}
+.searchUser .bottom .wrapper .forecast li .condition {
+  display: inline-block;
+  vertical-align: middle;
+  float: right;
+  font-size: 25px;
+}
+.searchUser .bottom .wrapper .forecast li .condition .temp {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 2px;
+}
+.searchUser .bottom .wrapper .forecast li .condition .temp .deg {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  margin-left: 3px;
+  vertical-align: top;
+}
+.searchUser .bottom .wrapper .forecast li .condition .temp .temp-type {
+  font-size: 20px;
+}
+.searchUser .bottom .wrapper .forecast li.active {
+  color: rgba(0, 0, 0, 0.8);
+}
+.searchUser.rain .top, .picWideHeader {
+  /*background: url("./assets/img/1.jpg") no-repeat;*/
+  background-size: cover !important;
+  background-position: center center !important;
+}
+.btnMargin {
+    margin: 15px;
+}
+.smallLink {
+        cursor: pointer;
+            text-decoration: underline;
+}
+.smallLink2 {
+        cursor: pointer;
+            
+}
+.smileicon {
+    width:50px;
+
+}
+.starIcon {
+    vertical-align: top;
+    width: 20px;
+}
+
+.headerPicUser {
+    
+    background-size: cover;
+    background-position: center center;
+}
+
+.removeFromGroup {
+    background: transparent;
+    color: #f6815d;
+    font-size: xx-large;
+    border: 0px;
+    top: 0px;
+    /* left: 0px !important; */
+    z-index: 10;
+    text-align: left !important;
+    padding-left: 0px;
+}
+
+
+.addToGroup {
+    background: transparent;
+    color: green;
+    font-size: xx-large;
+    border: 0px;
+    top: 0px;
+    /* left: 0px !important; */
+    z-index: 10;
+    text-align: left !important;
+    padding-left: 0px;
+}
+
+.addToGroup.OkBlack {
+color: black;    
+    }
+
+.OkGreen {
+    color:green;
+}
+
+
+
+.modal-footer {
+    border-top:0px;
+}
+
+.modal {
+    top:30px !important;
+}
+
+
+.profilePic {
+    float: left;
+    height: 150px;
+    max-width: 150px;
+}
+
+.close {
+text-shadow: 0 3px 0 #000;  
+opacity: 0.7 !important;
+z-index:200;
+
+}
+.modal-header,#groupDetails h4, .close {
+
+color: #fff !important;
+
+text-align: center;
+    
+font-size: 30px;
+}
+
+.addNewDialogHeader   {
+    background-color: #1e94f4;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+.modal-dialog {
+    width:1000px;
+}
+ .modal-body {
+        overflow: auto;
+        max-height: 500px;
+}
+#userDetails h4 {
+color:white;
+}
+.profileName {
+    text-shadow: 1px 1px 2px darkblue;
+}
+.componentHeader{
+    text-shadow: 1px 1px 2px darkblue;
+    margin-left:10px;
+}
+.searchUserInGroup {
+  margin-right: 20px;
+  /* height: 740px; */
+  width: 200px;
+  background: #fff;
+   border: 1px solid #f4511e; 
+    border-radius:0;
+    transition: box-shadow 0.5s;
+  /*box-shadow: 0 1px 100px rgba(247, 120, 120, 0.6), 0 5px 12px rgba(0, 0, 0, 0.25);*/
+  overflow: hidden;
+  display: inline-block;
+}
+
+.searchUser {
+  transform:scale(0.9,0.9);
+  
+  /* height: 740px; */
+  width: 200px;
+  background: #fff;
+  overflow: hidden;
+  display: inline-block;
+}
+
+    .searchUser:hover {
+    box-shadow: 5px -2px 40px #818181;
+    }
+
+
+    .popover-title {
+       color: #ece8e5;
+    font-size: 18px;
+    background-color: #f4511e;
+}
+.popover-content {
+color: #000aff;
+    font-size: 14px;
+}
+
+
+ .containerDivv {
+margin:30px;
+
+}
+
+ 
+
+ #splash {
+  background-color:#71b3e8;
+  text-align: center;
+  color:#fff;
+  padding-top:10em;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 4000;
+  
+}
+
