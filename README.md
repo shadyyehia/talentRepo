@@ -3,15 +3,24 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1. 
 By Shady Yahia
 
-## For running the application in production mode, please do the following steps:
+## For hosting the application on IIS, please do the following steps:
+
+1- Extract the "dist.zip" into a folder.<br />
+2- Create new web site on IIS and make the physical path refers to the extracted folder distination.<br />
+3- give the web site an application pool with enough permissions to access all local files, let's say use account "Local System".<br />
+and the you can browse using the IIS web site now.<br />
+
+
+## For hosting the application on light http-server, please do the following steps:
 
 1- Make sure that you have NodeJS installed on your machine.<br /> 
-2- Extract dist folder into a folder and name it any name, Ex: "Folder1". <br />
+2- Extract "dist.zip" into a folder and name it any name, Ex: "Folder1". <br />
 3- Using CMD go to the location of the "Folder1". <br />
 4- Run  npm install http-server -g. <br />
 5- Then run http-server. <br />
 
 This last command will serve all the files in your folder. you can check the terminal what ip-address and port you can use to access the application. Now open up your browser and type ip-adress:port/index.html
+
 
 ## For running the application in development mode:
 1- Copy all files in one folder, name it tlProject. <br />
