@@ -61,7 +61,7 @@ Before running the tests make sure you are serving the app via `ng serve`.<br />
    http://localhost:801/groups --> will display all groups<br />
 ( NOTE:  To make this feature works when you host on IIS , you must install URL rewrite )<br />
 
-## What's good about the application:
+## What's good about the application (technically):
 1- It is a master piece for Angular 2 along with Angular CLI frameworks.<br />
 2- Perfect data synchronization between talents and groups.Data updated every where tightly.<br />
 3- All tests ran successfully using Jasmine and Karma frameworks including the end-to-end test.<br />
