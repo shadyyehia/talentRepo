@@ -18,8 +18,8 @@
                     <h3>A member in .. </h3>
                     <!--a group-->
                     <div class="searchUser rain searchUserInGroup" *ngFor="let g of currentGroups" id="GroupID_{{g.id}}">
-                        <button type="button" class="glyphicon glyphicon-remove-sign removeFromGroup" title="Leave Group" (click)="unjoinGroup($event,g.id)"></button>
-                        <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + g.logo + ') no-repeat'}">
+                        <button type="button" class="glyphicon glyphicon-minus-sign removeFromGroup" title="Leave Group" (click)="unjoinGroup($event,g.id)"></button>
+                        <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + g.logo + ') no-repeat'}">
                             <div class="wrapper">
                                 <h1 class="heading">{{g.name}}</h1>
                                 <h3 class="location">({{g.memberCount}}) members</h3>
@@ -33,7 +33,7 @@
                     <!--a group-->
                     <div class="searchUser rain searchUserInGroup" *ngFor="let g of suggestionGroups" id="GroupID_{{g.id}}">
                         <button type="button" class="glyphicon glyphicon-plus-sign addToGroup" title="Join Group" (click)="joinGroup($event,g.id)"></button>
-                        <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + g.logo + ') no-repeat'}">
+                        <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + g.logo + ') no-repeat'}">
                             <div class="wrapper">
                                 <h1 class="heading">{{g.name}}</h1>
                                 <h3 class="location">({{g.memberCount}}) members</h3>

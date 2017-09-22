@@ -2,19 +2,29 @@
     <h1 class="componentHeader" *ngIf="!filterStr"><span class="label label-info">All Talents</span></h1>
     <div class="containerDivv" id="containerDivv2" >
         <div *ngFor="let t of talents" class="searchUser rain searchUserInGroup" id="talentDiv_{{t.id}}">
-            <button type="button" class="glyphicon glyphicon-remove-sign removeFromGroup" title="Remove Talent" (click)="removeTalent($event,t.id)"></button>
-            <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
-                <div class="wrapper">
-                    <h1 class="heading">{{t.name}}</h1>
-                    <h3 class="location">ID:{{t.id}}</h3>
-                    <p class="temp">
-                        <span class="temp-value">{{t.rating}}</span>
-                        <img src="../assets/img/star3.png" class="starIcon">
-                        <a class="smallLink" (click)="openDetails(t)">details</a>
-                    </p>
+            <button mwlConfirmationPopover
+                    [title]="title"
+                    [message]="message"
+                    [confirmText]="confirmText"
+                    [cancelText]="cancelText"
+                    [placement]="placement"
+                    (confirm)="removeTalent($event,t.id)"
+                    confirmButtonType="danger"
+                    cancelButtonType="default"
+                    [appendToBody]="true"
+                    class="glyphicon glyphicon-remove-sign removeFromGroup" title="Remove Talent"></button>  
+                <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
+                    <div class="wrapper">
+                        <h1 class="heading">{{t.name}}</h1>
+                        <h3 class="location">ID:{{t.id}}</h3>
+                        <p class="temp">
+                            <span class="temp-value">{{t.rating}}</span>
+                            <img src="../assets/img/star3.png" class="starIcon">
+                            <a class="smallLink" (click)="openDetails(t)">details</a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </div>
+</div>
     </div>
 </div>
 

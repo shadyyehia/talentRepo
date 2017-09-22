@@ -13,8 +13,8 @@
                     <h3>Current Members.. </h3>
                     <!--a group-->
                     <div class="searchUser rain searchUserInGroup" *ngFor="let t of currentTalents" id="{{t.id}}">
-                        <button type="button" class="glyphicon glyphicon-remove-sign removeFromGroup" title="Remove the talent from the Group" (click)="removeTalentFromGroup($event,t)"></button>
-                        <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
+                        <button type="button" class="glyphicon glyphicon-minus-sign removeFromGroup" title="Remove the talent from the Group" (click)="removeTalentFromGroup($event,t)"></button>
+                        <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
                             <div class="wrapper">
                                 <h1 class="heading">{{t.name}}</h1>
                                 <h3 class="location">ID:{{t.id}}</h3>
@@ -31,7 +31,7 @@
                     <!--a group-->
                     <div class="searchUser rain searchUserInGroup" *ngFor="let t of suggestionTalents" id="{{t.id}}">
                         <button type="button" class="glyphicon glyphicon-plus-sign addToGroup" title="Add the talent to the Group" (click)="addToGroup($event,t)"></button>
-                        <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
+                        <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
                             <div class="wrapper">
                                 <h1 class="heading">{{t.name}}</h1>
                                 <h3 class="location">ID:{{t.id}}</h3>

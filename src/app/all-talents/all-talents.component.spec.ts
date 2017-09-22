@@ -19,7 +19,7 @@ import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { ErrorComponent } from '../error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { APP_BASE_HREF } from '@angular/common';
-
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 describe('AllTalentsComponent', () => {
   let component: AllTalentsComponent;
   let fixture: ComponentFixture<AllTalentsComponent>;
@@ -30,6 +30,7 @@ describe('AllTalentsComponent', () => {
           imports: [BrowserModule,
               BrowserAnimationsModule,
               HttpModule,
+              ConfirmationPopoverModule,
               FormsModule, ToastModule.forRoot(),
               AppRoutingModule],
           providers: [TalentService, { provide: APP_BASE_HREF, useValue: '/' }],

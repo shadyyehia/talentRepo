@@ -45,7 +45,7 @@
                         <h3 >Suggested groups to join..</h3>
                         <div *ngFor="let t of groups" class="searchUser rain searchUserInGroup" [id]="t.id">
                             <button type="button" class="glyphicon glyphicon-ok-circle addToGroup" [ngClass]="t.selected?'OkGreen':'OkBlack'" (click)="selectClicked($event,t)" title="Make it green and add the user to the group!"></button>
-                            <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.logo + ') no-repeat'}">
+                            <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.logo + ') no-repeat'}">
                                 <div class="wrapper">
                                     <h1 class="heading">{{t.name}}</h1>
                                     <h3 class="location">({{t.memberCount}}) members</h3>                                   

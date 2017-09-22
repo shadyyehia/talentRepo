@@ -17,7 +17,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ToastModule } from 'ng2-toastr/ng2-toastr';
 import { ErrorComponent } from './error/error.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 declare var $: any;
 
 
@@ -42,7 +42,10 @@ declare var $: any;
         BrowserAnimationsModule,
         HttpModule,          
         FormsModule, ToastModule.forRoot(),       
-        AppRoutingModule
+        AppRoutingModule,
+        ConfirmationPopoverModule.forRoot({
+            confirmButtonType: 'danger' // set defaults here
+        })
     ],
     providers: [TalentService],
     bootstrap: [AppComponent]

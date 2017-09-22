@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 declare var $: any;
 @Component({
@@ -6,7 +6,7 @@ declare var $: any;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit{
     title = 'tlApp';
     
     constructor(public toastr: ToastsManager, vcr: ViewContainerRef) {
@@ -21,8 +21,10 @@ export class AppComponent implements OnInit {
     ngOnInit()
     {
         $("[data-toggle=popover]").popover();
-      
+       
         
     }
+
+    
     
 }

@@ -29,7 +29,7 @@
                         <h3>Please choose at least one member..</h3>
                         <div *ngFor="let t of talents" class="searchUser rain searchUserInGroup" id="talentDiv_{{t.id}}">
                             <button type="button" class="glyphicon glyphicon-ok-circle addToGroup" [ngClass]="t.selected?'OkGreen':'OkBlack'" (click)="selectClicked($event,t)" title="Make it green and add to the group!"></button>
-                            <div class="top" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
+                            <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
                                 <div class="wrapper">
                                     <h1 class="heading">{{t.name}}</h1>
                                     <h3 class="location">ID:{{t.id}}</h3>

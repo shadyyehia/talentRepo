@@ -1,0 +1,48 @@
+﻿{
+  "talents": [
+    {
+      "name": "Leo Sing",
+      "picture": "/1.jpg",
+      "rating": 4,
+      "id": "1",
+      "groups": [1]
+    },
+    {
+      "name": "Angelina",
+      "picture": "/2.jpg",
+      "rating": 2,
+      "id": "2",
+      "groups": [ 1, 2 ]
+    },
+    {
+      "name": "Anne",
+      "picture": "/3.jpg",
+      "rating": 5,
+      "id": "3",
+      "groups": []
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "singers",
+      "memberCount": 2,
+      "logo": "/5.jpg"
+    },
+    {
+      "id": 2,
+      "name": "actors",
+      "memberCount": 1,
+      "logo": "/6.jpg"
+    },
+    {
+      "id": 6,
+      "name": "magicians",
+      "memberCount": 0,
+      "logo": "/9.jpg"
+    }
+
+  ]
+}
+
+

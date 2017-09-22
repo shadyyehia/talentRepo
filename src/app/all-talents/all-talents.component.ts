@@ -29,57 +29,59 @@ export class AllTalentsComponent implements OnInit, OnChanges {
     public talents: ITalent[];
     selectedTalent: ITalent;
     @Input() filterStr: string;
-   
-     @ViewChild('talentDetails') talentDetails: TalentDetailsComponent;
-     constructor(public _talentSrv: TalentService, public toastr: ToastsManager, vcr: ViewContainerRef) {
 
-         this.toastr.setRootViewContainerRef(vcr);
-     }
-     ngOnInit() {
-         if (this._talentSrv.isTalentsEmpty) {
-             this._talentSrv.getData().map(res => res).subscribe(res =>
-             {
-             this.talents = res.talents;
-             if (this.filterStr ) {
-                 this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
-                 this.toastr.info("Found matching talents");
-             }
+    title: string = 'Are you sure?';
+    placement: string = 'top';
+    message: string = 'Are you really <b>sure</b> you want to delete this talent?';
+    confirmText: string = 'Yes <i class="glyphicon glyphicon-ok"></i>';
+    cancelText: string = 'No <i class="glyphicon glyphicon-remove"></i>';
 
-             });
-         }
-         else
-             this.talents = this._talentSrv.storage.talents;
-         if (this.filterStr && this._talentSrv.storage.talents) {
-             this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
-         }
-        
-     }
-     openDetails(ob: any)
-     {
-         this.selectedTalent = ob;
 
-         //duplicate row to display the dialog after the first time
-         $('#userDetails').modal('show'); 
-     }
-     ngOnChanges(changes: SimpleChanges) {
-         if (this.filterStr && this._talentSrv.storage.talents) {
-             this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
-             this.toastr.info("Found matching Talents");
-         }
-         else
-             this.talents = this._talentSrv.storage.talents;
+    @ViewChild('talentDetails') talentDetails: TalentDetailsComponent;
+    constructor(public _talentSrv: TalentService, public toastr: ToastsManager, vcr: ViewContainerRef) {
 
-         
+        this.toastr.setRootViewContainerRef(vcr);
+    }
+    ngOnInit() {
+        if (this._talentSrv.isTalentsEmpty) {
+            this._talentSrv.getData().map(res => res).subscribe(res => {
+                this.talents = res.talents;
+                if (this.filterStr) {
+                    this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
+                    this.toastr.info("Found matching talents");
+                }
 
-     }
-     removeTalent(evt,id: string)
-     {
-         var r = confirm("You are about to delete the talent,would you like to continue?");
-         if (r == true) {             
-             this.talents = this._talentSrv.removeFromArrayOfObjects(this.talents, "id", id);
-             this.toastr.success('Talent has been deleted successfully', 'Success!');
-         }         
+            });
+        }
+        else
+            this.talents = this._talentSrv.storage.talents;
+        if (this.filterStr && this._talentSrv.storage.talents) {
+            this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
+        }
+
+    }
+    openDetails(ob: any) {
+        this.selectedTalent = ob;
+
+        //duplicate row to display the dialog after the first time
+        $('#userDetails').modal('show');
+    }
+    ngOnChanges(changes: SimpleChanges) {
+        if (this.filterStr && this._talentSrv.storage.talents) {
+            this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
+            this.toastr.info("Found matching Talents");
+        }
+        else
+            this.talents = this._talentSrv.storage.talents;
+
+
+
+    }
+    removeTalent(evt, id: string) {
+
+        this.talents = this._talentSrv.removeFromArrayOfObjects(this.talents, "id", id);
+        this.toastr.success('Talent has been deleted successfully', 'Success!');
+
         //$(this).parent().remove();
-     }
-    
+    }
 }

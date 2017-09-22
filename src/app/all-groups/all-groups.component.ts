@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, trigger, transition, style, animate, state, ViewContainerRef, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, trigger, transition, AfterViewInit, style, animate, state, ViewContainerRef, OnChanges, SimpleChanges } from '@angular/core';
 import { IGroup } from '../model/ITalent';
 import { TalentService } from '../services/talent.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
@@ -32,14 +32,16 @@ export class AllGroupsComponent implements OnInit, OnChanges {
     @Input() filterStr: string;
     @ViewChild('groupDetails') groupDetails: GroupDetailsComponent;
     constructor(public _talentSrv: TalentService, public toastr: ToastsManager, vcr: ViewContainerRef) {
-
+        
         this.toastr.setRootViewContainerRef(vcr);
     }
-    public title: string = 'Popover title';
-    public message: string = 'Popover description';
-    public confirmClicked: boolean = false;
-    public cancelClicked: boolean = false;
-    public isOpen: boolean = false;
+   
+    title: string = 'Are you sure?';
+    placement: string = 'top';
+    message: string = 'Are you really <b>sure</b> you want to delete this group?';
+    confirmText: string = 'Yes <i class="glyphicon glyphicon-ok"></i>';
+    cancelText: string = 'No <i class="glyphicon glyphicon-remove"></i>';
+   
     ngOnInit() {
         if (this._talentSrv.isTalentsEmpty) {
             this._talentSrv.getData().map(res => res).subscribe(res =>
@@ -57,7 +59,9 @@ export class AllGroupsComponent implements OnInit, OnChanges {
         {
             this.groups = this._talentSrv.storage.groups.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
         }
-       
+
+        
+              
         
 
     }
@@ -77,22 +81,18 @@ export class AllGroupsComponent implements OnInit, OnChanges {
 
 
     }
-    removeGroup(evt, id: string) {
-        var r = confirm("You are about to delete the group,would you like to continue?");
-        if (r == true) {
-            var result = this._talentSrv.removeGroup(id);
-            if (result) {
-                this.toastr.success('Group has been deleted successfully', 'Success!');
-            }
-            else {
-                this.toastr.error('Group can not be deleted if at least one member in it', 'Oops!');
-            }
-        } else {
-           
+    removeGroup($event, id: string) {
+        var result = this._talentSrv.removeGroup(id);
+        if (result) {
+            this.toastr.success('Group has been deleted successfully', 'Success!');
+
         }
-       
-        //$(this).parent().remove();
+        else {
+            this.toastr.error('Group can not be deleted if at least one member in it', 'Oops!');
+        }
+
     }
 
+    
    
 }
