@@ -41,7 +41,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Before running the tests make sure you are serving the app via `ng serve`.<br />
 
 ## Features:
 1- Welcome screen <br />
@@ -54,12 +54,12 @@ Before running the tests make sure you are serving the app via `ng serve`.
 8- Validation: required fields will be heighlighted for form input.<br />
 9- Help tooltip.<br />
 10-In place Confirmation message before deleting talent/group.<br />
-11-Functionalitis can be bookmarked in the browser for later usage.
-   examples:
-   http://localhost:801/searchResult/actors --> redirects to search result of "actors" keyword
-   http://localhost:801/talents --> will dislay all talents
-   http://localhost:801/groups --> will display all groups
-( NOTE:  To make this feature works when you host on IIS , you must install URL rewrite )
+11-Functionalitis can be bookmarked in the browser for later usage.<br />
+   examples:<br />
+   http://localhost:801/searchResult/actors --> redirects to search result of "actors" keyword<br />
+   http://localhost:801/talents --> will dislay all talents<br />
+   http://localhost:801/groups --> will display all groups<br />
+( NOTE:  To make this feature works when you host on IIS , you must install URL rewrite )<br />
 
 ## What's good about the application:
 1- It is a master piece for Angular 2 along with Angular CLI frameworks.<br />
@@ -75,7 +75,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Things to be improved in the future:
 1- Coloring and animation enhancement.<br />
 2- Adding more animations.<br />
-3- Adding more tests. 
+3- Adding more tests. <br />
 4- Creating a reusable component for the User/Group card. ( for not repeating the HTML in many places ) <br />
 
 
