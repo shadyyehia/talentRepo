@@ -16,18 +16,18 @@ and then you can browse using the IIS web site.<br />
 1- Make sure that you have NodeJS installed on your machine.<br /> 
 2- Extract "dist.zip" into a folder and name it any name, Ex: "Folder1". <br />
 3- Using CMD go to the location of the "Folder1". <br />
-4- Run npm init ,  then npm install to download package.json and basic node modules.
-4- Run  npm install http-server -g. <br />
-5- Then run <strong>http-server</strong>. <br /> The server  will serve all the files in your folder. you can check the terminal what ip-address and port you can use to access the application. Now open up your browser and type ip-adress:port/index.html
+4- Run `npm init` ,  then `npm install` to download package.json and basic node modules.
+4- Run  `npm install http-server -g`. <br />
+5- Then run `http-server`. <br /> The server  will serve all the files in your folder. you can check the terminal what ip-address and port you can use to access the application. Now open up your browser and type ip-adress:port/index.html
 
 
 ## For running the application in development mode:
 1- Copy all files in one folder, name it tlProject. <br />
-2- Open cmd and go to the folder, then Install angular Cli using : npm install -g @angular/cli.<br />
-2- Run npm install in the tlProject folder.<br />
+2- Open cmd and go to the folder, then Install angular Cli using : `npm install -g @angular/cli`.<br />
+2- Run `npm install` in the tlProject folder.<br />
 3- Run ng build in the same folder and make sure that build succeeded.<br />
-Note: If the build failed for missing package, you can install using npm install <package> <br />
-4- Run `ng serve -o' Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<br />
+Note: If the build failed for missing package, you can install using `npm install <package>` <br />
+4- Run `ng serve -o` , Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<br />
 
 ## Build
 
