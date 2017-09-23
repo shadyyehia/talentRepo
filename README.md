@@ -10,6 +10,9 @@ By Shady Yahia
 3- give the web site an application pool with enough permissions to access all local files, let's say use account "Local System"<br />
 and then you can browse using the IIS web site.<br />
 
+## For uploading talent picture or group logo:
+Please copy the image manually your self in assets/img folder. This part is hard coded in the application.
+
 
 ## For hosting the application on a light http-server, please do the following steps:
 
