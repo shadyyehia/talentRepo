@@ -56,6 +56,7 @@ Before running the tests make sure you are serving the app via `ng serve`.<br />
 8- Validation: required fields will be heighlighted for form input.<br />
 9- Help tooltip.<br />
 10-In place Confirmation message before deleting talent/group.<br />
+11-Shaking title "Talent Expats" when you hover on it.
 11-Functionalitis can be bookmarked in the browser for later usage.<br />
    examples:<br />
    http://localhost:801/searchResult/actors --> redirects to search result of "actors" keyword<br />
@@ -77,8 +78,11 @@ Before running the tests make sure you are serving the app via `ng serve`.<br />
 ## Things to be improved in the future:
 1- Coloring and animation enhancement.<br />
 2- Adding more animations.<br />
-3- Adding more tests. <br />
+3- Adding more end-to-end tests, only added unit tests for each component. <br />
 4- Creating a reusable component for the User/Group card. ( for not repeating the HTML in many places ) <br />
+5- Upload Image functionality is not implemented, it just saves the name of the image to be retrieved later from assets/img <br/>
+,so all images must be in assets/img to be displayed in the application.
+
 
 
 

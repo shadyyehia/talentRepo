@@ -8,12 +8,11 @@
       font: 400 15px Lato, sans-serif;
       /* line-height: 1.8; */
       color: #818181;
-      overflow:hidden;
+      overflow-y:auto !important;
       background: linear-gradient(to right, rgba(255,0,0,0), #f2c1c1); 
   }
 .routerDiv {
-    overflow-y:auto !important;
-    max-height: calc(100vh - 22em);
+   
     overflow-x: hidden;
 }
  
