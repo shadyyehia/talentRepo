@@ -32,32 +32,19 @@ Please copy the image manually your self in assets/img folder. This part is hard
 Note: If the build failed for missing package, you can install using `npm install <package>` <br />
 4- Run `ng serve -o` , Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<br />
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.<br />
-
 ## Features:
 1- Welcome screen <br />
 2- Quick search for searching for talents and groups in the same search box.<br />
-3- All talents in one list, All Groups in one list from the top navigation links.<br />
+3- All talents/groups can be displayed from the top navigation links.<br />
 4- Delete talent or a group.<br />
 5- Adding new talent or a group.<br />
 6- Validation: if a group has at least one talent , it can't be deleted.<br />
 7- Validatin: A new Group must have at least one talent before creating it.<br />
 8- Validation: required fields will be heighlighted for form input.<br />
-9- Help tooltip.<br />
-10-In place Confirmation message before deleting talent/group.<br />
+9- Help tooltip in dialogs.<br />
+10-In place confirmation message before deleting talent/group.<br />
 11-Shaking title "Talent Expats" when you hover on it.<br />
-12-Functionalitis can be bookmarked in the browser for later usage.<br />
+12-Functionalities can be bookmarked in the browser for later usage.<br />
    examples:<br />
    http://localhost:801/searchResult/actors --> redirects to search result of "actors" keyword<br />
    http://localhost:801/talents --> will dislay all talents<br />
@@ -77,13 +64,20 @@ Before running the tests make sure you are serving the app via `ng serve`.<br />
 
 ## Things to be improved in the future:
 1- Coloring and animation enhancement.<br />
-2- Adding more animations.<br />
-3- Adding more end-to-end tests, only added unit tests for each component. <br />
-4- Creating a reusable component for the User/Group card. ( for not repeating the HTML in many places ) <br />
-5- Upload Image functionality is not implemented, it just saves the name of the image to be retrieved later from assets/img <br/>
+2- Creating a reusable component for the User/Group card. ( for not repeating the HTML in many places ) <br />
+3- Upload Image functionality is not implemented, it just saves the name of the image to be retrieved later from assets/img <br/>
 ,so all images must be in assets/img to be displayed in the application.
+4- Check responsiveness for the confirmation message.
 
+## Build
 
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
+## Running unit tests
 
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.<br />
