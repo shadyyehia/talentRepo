@@ -7,7 +7,7 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-    title = 'tlApp';
+    title = 'TlProject';
     
     constructor(public toastr: ToastsManager, vcr: ViewContainerRef) {
         this.toastr.setRootViewContainerRef(vcr);

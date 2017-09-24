@@ -8,26 +8,21 @@
       font: 400 15px Lato, sans-serif;
       /* line-height: 1.8; */
       color: #818181;
-       background: linear-gradient(to right, rgba(255,0,0,0), #f2c1c1); 
+      overflow:hidden;
+      background: linear-gradient(to right, rgba(255,0,0,0), #f2c1c1); 
   }
-
-  h2 {
-      font-size: 24px;  
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-  }
-
-  h4 {
-      font-size: 19px;
-      /* line-height: 1.375em; */
-      color: #303030;
-      font-weight: 400;
-  }  
+.routerDiv {
+    overflow-y:auto !important;
+    max-height:300px;
+}
+ 
   .jumbotron {
       background-color: #71b3e8;
       color: #fff;
-      padding: 120px ;
+      padding-left:5em;
+      padding-right:5em;
+      padding-top:4em;
+      padding-bottom:0.6em;
       font-family: Montserrat, sans-serif;
   }
  
@@ -107,46 +102,43 @@
         font-size: 150px;
     }
   }
+@media screen and (max-width:482px) {
 
-  
-
+   
+}
+#addBtnsContainer {
+display:inline-flex;
+width:100%;
+ text-align: left;
+}
 
 .searchUser .topp {
   position: relative;
-  height: 200px;
+ 
   width: 100%;
   overflow: hidden;  
-  background-size: cover;
-  background-position: center center;  
+  background-size: 100% 100%;
+  background-position: right !important;  
 }
 .searchUser .topp .wrapper {
-      padding: 70px 10px 10px 10px;
+  
   position: relative;
   z-index: 1;
 }
-.searchUser .topp .wrapper .mynav {
-  height: 20px;
-}
-.searchUser .topp .wrapper .mynav .lnr {
-  color: #fff;
-  font-size: 20px;
-}
-.searchUser .topp .wrapper .mynav .lnr-chevron-left {
-  display: inline-block;
-  float: left;
-}
-.searchUser .topp .wrapper .mynav .lnr-cog {
-  display: inline-block;
-  float: right;
-}
+   .containerDivv .searchUser .topp .wrapper {
+        position: absolute;
+        z-index: 1;
+        bottom: 2px;
+    }
+
 .searchUser .topp .wrapper .heading {
-  font-size: 20px;
+  
   font-weight: 400;
   color: #fff;
 }
 .searchUser .topp .wrapper .location {
   margin-top: 15px;
-  font-size: 21px;
+  
   font-weight: 400;
   color: #fff;
 }
@@ -157,23 +149,14 @@
  
   color: #fff;
 }
-.searchUser .topp .wrapper .temp a .temp-type {
-  font-size: 85px;
-}
+
 .searchUser .topp .wrapper .temp .temp-value {
   display: inline-block;
   font-size: 30px;
   font-weight: 600;
   color: #fff;
 }
-.searchUser .topp .wrapper .temp .deg {
-  display: inline-block;
-  font-size: 35px;
-  font-weight: 600;
-  color: #fff;
-  vertical-align: top;
-  margin-top: 10px;
-}
+
 .searchUser .topp:after {
     content:'';
   height: 100%;
@@ -266,19 +249,19 @@
 }
 .starIcon {
     vertical-align: top;
-    width: 20px;
+    width: 15px;
 }
 
 .headerPicUser {
     
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center center;
 }
 
 .removeFromGroup {
     background: transparent;
     color: #f6815d;
-    font-size: xx-large;
+    font-size: x-large;
     border: 0px;
     top: 0px;
     /* left: 0px !important; */
@@ -287,11 +270,14 @@
     padding-left: 0px;
 }
 
+.headerRating {
+    font-size: 22px;
+}
 
 .addToGroup {
     background: transparent;
     color: green;
-    font-size: xx-large;
+    font-size: x-large;
     border: 0px;
     top: 0px;
     /* left: 0px !important; */
@@ -315,49 +301,76 @@ color: black;
 }
 
 .modal {
-    top:30px !important;
+    top:3em !important;
+    overflow: hidden !important;
 }
+.indialog {
+    max-height: 140px !important;
+    max-width: 140px !important;
 
+}
 
 .profilePic {
     float: left;
-    height: 150px;
+    height: 110px;
     max-width: 150px;
+    margin: 0.3em;
+    
 }
 
 .close {
 text-shadow: 0 3px 0 #000;  
 opacity: 0.7 !important;
 z-index:200;
-
+margin:0.2em !important;
 }
-.modal-header,#groupDetails h4, .close {
-
+.modal-header {
+    padding:0 !important;
+    
 color: #fff !important;
 
-text-align: center;
+text-align: left;
+    
+font-size: 30px;
+}
+#groupDetails h4, .close {
+    
+color: #fff !important;
+
+text-align: left;
     
 font-size: 30px;
 }
 
+
 .addNewDialogHeader   {
     background-color: #1e94f4;
     color: #fff !important;
-    text-align: center;
+    text-align: left;
     font-size: 30px;
 }
+.modal-header h4 {
+margin-left:10px;
 
+   }
+.rating {
+float:left;
+margin-left:0px !important;
+
+}
 
 
 .modal-dialog {
-    width:1000px;
+    max-width: 60%;
+    min-width: 280px;
 }
- .modal-body {
-        overflow: auto;
-        max-height: 500px;
+.addmode .modal-body {
+    overflow: auto;
+    max-height: calc(100vh - 210px);
 }
-#userDetails h4 {
-color:white;
+.detailsmode .modal-body {
+     overflow: auto;
+    max-height: calc(100vh - 20em);
 }
 .profileName {
     text-shadow: 1px 1px 2px darkblue;
@@ -379,11 +392,21 @@ color:white;
   display: inline-block;
 }
 
+
+.containerDivv .searchUser {
+    height:200px;
+}
+
+    .containerDivv .searchUser.rain .topp, .picWideHeader {
+    height:90%;
+    }
+
 .searchUser {
-  transform:scale(0.9,0.9);
   
-  /* height: 740px; */
-  width: 200px;
+  margin-top:10px;
+  
+  width: 140px;
+  
   background: #fff;
   overflow: hidden;
   display: inline-block;
@@ -392,9 +415,7 @@ color:white;
     .searchUser:hover {
     box-shadow: 5px -2px 40px #818181;
     }
-
-
-    .popover-title {
+.popover-title {
        color: #ece8e5;
     font-size: 18px;
     background-color: #f4511e;
@@ -404,13 +425,10 @@ color: #000aff;
     font-size: 14px;
 }
 
-
  .containerDivv {
-margin:30px;
+margin-left:30px;
 
 }
-
- 
 
  #splash {
   background-color:#71b3e8;

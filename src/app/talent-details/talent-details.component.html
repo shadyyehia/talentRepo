@@ -1,42 +1,42 @@
-<div class="modal fade" id="userDetails" role="dialog" >
+<div class="modal fade detailsmode" id="userDetails" role="dialog" >
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content" >
             <div  class="modal-header picWideHeader addNewDialogHeader"   >
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <img [src]="'../assets/img/'+talent?.picture" class="profilePic " /> <h1 class="profileName">{{talent?.name}}</h1>
-                <h3 class="location profileName">ID: {{talent?.id}}</h3>
-                <p class="temp">
-                    <span class="temp-value profileName">{{talent?.rating}}</span>
+                <img [src]="'../assets/img/'+talent?.picture" class="profilePic " /> <h3 class="profileName">{{talent?.name}}</h3>
+                <h4 class="location profileName">ID: {{talent?.id}}</h4>
+              
+                    <h4 class="location profileName rating">{{talent?.rating}}</h4>
                     <img src="../assets/img/star3.png" class="starIcon profileName">
 
-                </p>
+               
             </div>
             <div class="modal-body">
                 <div *ngIf="currentGroups?.length > 0">
-                    <h3>A member in .. </h3>
+                    <h5>A member in .. </h5>
                     <!--a group-->
-                    <div class="searchUser rain searchUserInGroup" *ngFor="let g of currentGroups" id="GroupID_{{g.id}}">
+                    <div class="searchUser rain searchUserInGroup indialog" *ngFor="let g of currentGroups" id="GroupID_{{g.id}}">
                         <button type="button" class="glyphicon glyphicon-minus-sign removeFromGroup" title="Leave Group" (click)="unjoinGroup($event,g.id)"></button>
                         <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + g.logo + ') no-repeat'}">
                             <div class="wrapper">
-                                <h1 class="heading">{{g.name}}</h1>
-                                <h3 class="location">({{g.memberCount}}) members</h3>
+                                <h5 class="heading">{{g.name}}</h5>
+                                <h5 class="location">({{g.memberCount}}) members</h5>
                             </div>
                         </div>
                     </div>                    
                 </div>
                 <!--End of group-->
                 <div *ngIf="suggestionGroups?.length > 0">
-                    <h3>Suggested Groups ..</h3>
+                    <h5>Suggested Groups ..</h5>
                     <!--a group-->
-                    <div class="searchUser rain searchUserInGroup" *ngFor="let g of suggestionGroups" id="GroupID_{{g.id}}">
+                    <div class="searchUser rain searchUserInGroup indialog" *ngFor="let g of suggestionGroups" id="GroupID_{{g.id}}">
                         <button type="button" class="glyphicon glyphicon-plus-sign addToGroup" title="Join Group" (click)="joinGroup($event,g.id)"></button>
                         <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + g.logo + ') no-repeat'}">
                             <div class="wrapper">
-                                <h1 class="heading">{{g.name}}</h1>
-                                <h3 class="location">({{g.memberCount}}) members</h3>
+                                <h5 class="heading">{{g.name}}</h5>
+                                <h5 class="location">({{g.memberCount}}) members</h5>
                             </div>
                         </div>
                     </div>

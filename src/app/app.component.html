@@ -10,21 +10,19 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a [routerLink]="['/talents']" class="smallLink2" >All Talents</a></li>
-                <li><a  [routerLink]="['/groups']" class="smallLink2" >All Groups</a></li>
+                <li><a [routerLink]="['/talents']" class="smallLink2">All Talents</a></li>
+                <li><a [routerLink]="['/groups']" class="smallLink2">All Groups</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<div class="upperSide">
+    <app-quick-search></app-quick-search>
 
-<app-quick-search></app-quick-search>
-
-<app-add-group></app-add-group>
-<app-add-talent></app-add-talent>
-
-
-
-
-<router-outlet></router-outlet>
-
+    <app-add-group></app-add-group>
+    <app-add-talent></app-add-talent>
+</div>
+<div class="routerDiv">
+    <router-outlet></router-outlet>
+</div>

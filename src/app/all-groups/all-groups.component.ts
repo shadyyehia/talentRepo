@@ -49,6 +49,8 @@ export class AllGroupsComponent implements OnInit, OnChanges {
             this.groups = res.groups;
             if (this.filterStr) {
                 this.groups = this._talentSrv.storage.groups.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
+                //if (this.groups.length > 0)
+                //    this.toastr.info("matching groups");
             }
             });
         }
@@ -60,10 +62,6 @@ export class AllGroupsComponent implements OnInit, OnChanges {
             this.groups = this._talentSrv.storage.groups.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
         }
 
-        
-              
-        
-
     }
     openDetails(ob: any) {
         this.selectedGroup = ob;
@@ -74,7 +72,8 @@ export class AllGroupsComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         if (this.filterStr && this._talentSrv.storage.groups) {
             this.groups = this._talentSrv.storage.groups.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
-            this.toastr.info("Found matching groups");
+            if (this.groups.length>0)
+            this.toastr.info("matching groups");
         }
         else
             this.groups = this._talentSrv.storage.groups;

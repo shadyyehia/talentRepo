@@ -1,4 +1,4 @@
-<div class="modal fade" id="groupDetails" role="dialog">
+<div class="modal fade detailsmode" id="groupDetails" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -10,14 +10,14 @@
             </div>
             <div class="modal-body">
                 <div *ngIf="currentTalents?.length > 0">
-                    <h3>Current Members.. </h3>
+                    <h5>Current Members.. </h5>
                     <!--a group-->
-                    <div class="searchUser rain searchUserInGroup" *ngFor="let t of currentTalents" id="{{t.id}}">
+                    <div class="searchUser rain searchUserInGroup indialog" *ngFor="let t of currentTalents" id="{{t.id}}">
                         <button type="button" class="glyphicon glyphicon-minus-sign removeFromGroup" title="Remove the talent from the Group" (click)="removeTalentFromGroup($event,t)"></button>
                         <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
                             <div class="wrapper">
-                                <h1 class="heading">{{t.name}}</h1>
-                                <h3 class="location">ID:{{t.id}}</h3>
+                                <h5 class="heading">{{t.name}}</h5>
+                                <h5 class="location">ID:{{t.id}}</h5>
                                 <p class="temp">
                                     <span class="temp-value">{{t.rating}}</span>
                                     <img src="../assets/img/star3.png" class="starIcon">                                   
@@ -27,14 +27,14 @@
                     </div>
                 </div>
                 <div *ngIf="suggestionTalents?.length > 0">
-                    <h3>Suggested Members.. </h3>
+                    <h5>Suggested Members.. </h5>
                     <!--a group-->
-                    <div class="searchUser rain searchUserInGroup" *ngFor="let t of suggestionTalents" id="{{t.id}}">
+                    <div class="searchUser rain searchUserInGroup indialog" *ngFor="let t of suggestionTalents" id="{{t.id}}">
                         <button type="button" class="glyphicon glyphicon-plus-sign addToGroup" title="Add the talent to the Group" (click)="addToGroup($event,t)"></button>
                         <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
                             <div class="wrapper">
-                                <h1 class="heading">{{t.name}}</h1>
-                                <h3 class="location">ID:{{t.id}}</h3>
+                                <h5 class="heading">{{t.name}}</h5>
+                                <h5 class="location">ID:{{t.id}}</h5>
                                 <p class="temp">
                                     <span class="temp-value">{{t.rating}}</span>
                                     <img src="../assets/img/star3.png" class="starIcon">

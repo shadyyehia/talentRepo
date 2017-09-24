@@ -1,10 +1,12 @@
 <div id="SearchResult" class="container-fluid">
-   
-    <app-all-talents [filterStr]="filterText" #allTl></app-all-talents>
-    <app-all-groups [filterStr]="filterText" #allGr></app-all-groups>
+    <h3 class="componentHeader" *ngIf="allTl.talents?.length > 0 && allGr.groups?.length > 0 "><span class="label label-info">We found results :)</span></h3>
+    <div class="row">
+        <app-all-talents [filterStr]="filterText" #allTl></app-all-talents>
+        <app-all-groups [filterStr]="filterText" #allGr></app-all-groups>
+    </div>
 
-    <!--<div id="NoResult" *ngIf="talents?.length == 0 && groups?.length == 0 ">
-        <h2>No talents found <img src="../assets/img/sad.png" class="smileicon" /> </h2>
-    </div>-->
+    <div id="NoResult" *ngIf="allTl.talents?.length == 0 && allGr.groups?.length == 0 ">
+        <h2>sorry, no results found ! </h2>
+    </div>
 
 </div>

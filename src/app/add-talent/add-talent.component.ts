@@ -43,7 +43,14 @@ export class AddTalentComponent implements OnInit {
         if (!$('#formTalent1').validator('validate').has('.has-error').length) {
             //generate random number between 0 to 999999
             var randomID = Math.floor(Math.random() * 1000000);
-            var selectedGroupIds = this.groups.filter(t => t.selected).map(r => r.id);
+            var selectedGroupIds = this.groups.filter(t => t.selected).map(r => {
+                this._talentSrv.storage.groups.forEach(g => {
+                    if (g.id == r.id) {
+                        g.memberCount++;
+                    }
+                });
+                return r.id
+            });
             var talent = <ITalent>{
                 id: randomID.toString(), name: this.name, picture: this.picture, rating: this.rating, groups: selectedGroupIds
             };

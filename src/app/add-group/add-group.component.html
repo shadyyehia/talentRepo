@@ -1,11 +1,11 @@
-<div class="modal fade" id="AddGroupDialog" role="dialog">
+<div class="modal fade addmode" id="AddGroupDialog" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header addNewDialogHeader">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h1 class="profileName">Add New Group</h1>
+                <h4 class="profileName">Add New Group</h4>
             </div>
             <form class="form-horizontal" data-toggle="validator" id="formGroup1">
                 <div class="modal-body">
@@ -26,13 +26,13 @@
                         </div>
                     </div>
                     <div *ngIf="talents?.length > 0" >
-                        <h3>Please choose at least one member..</h3>
-                        <div *ngFor="let t of talents" class="searchUser rain searchUserInGroup" id="talentDiv_{{t.id}}">
+                        <h5>Please choose at least one member..</h5>
+                        <div *ngFor="let t of talents" class="searchUser rain searchUserInGroup indialog" id="talentDiv_{{t.id}}">
                             <button type="button" class="glyphicon glyphicon-ok-circle addToGroup" [ngClass]="t.selected?'OkGreen':'OkBlack'" (click)="selectClicked($event,t)" title="Make it green and add to the group!"></button>
                             <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
                                 <div class="wrapper">
-                                    <h1 class="heading">{{t.name}}</h1>
-                                    <h3 class="location">ID:{{t.id}}</h3>
+                                    <h5 class="heading">{{t.name}}</h5>
+                                    <h5 class="location">ID:{{t.id}}</h5>
                                     <p class="temp">
                                         <span class="temp-value">{{t.rating}}</span>
                                         <img src="../assets/img/star3.png" class="starIcon">

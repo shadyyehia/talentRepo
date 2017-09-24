@@ -48,7 +48,8 @@ export class AllTalentsComponent implements OnInit, OnChanges {
                 this.talents = res.talents;
                 if (this.filterStr) {
                     this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
-                    this.toastr.info("Found matching talents");
+                    //if (this.talents.length>0)
+                    //this.toastr.info("matching talents");
                 }
 
             });
@@ -69,7 +70,8 @@ export class AllTalentsComponent implements OnInit, OnChanges {
     ngOnChanges(changes: SimpleChanges) {
         if (this.filterStr && this._talentSrv.storage.talents) {
             this.talents = this._talentSrv.storage.talents.filter(g => g.name.toLowerCase().includes(this.filterStr.toLowerCase()));
-            this.toastr.info("Found matching Talents");
+            if (this.talents.length > 0)
+            this.toastr.info("matching talents");
         }
         else
             this.talents = this._talentSrv.storage.talents;

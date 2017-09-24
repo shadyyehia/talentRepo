@@ -1,11 +1,11 @@
 ﻿{
   "talents": [
     {
-      "name": "Leo Sing",
+      "name": "Leo Dicaprio",
       "picture": "/1.jpg",
       "rating": 4,
       "id": "1",
-      "groups": [1]
+      "groups": [ 1 ]
     },
     {
       "name": "Angelina",
@@ -20,7 +20,7 @@
       "rating": 5,
       "id": "3",
       "groups": []
-    }
+    }   
   ],
   "groups": [
     {
@@ -41,7 +41,6 @@
       "memberCount": 0,
       "logo": "/9.jpg"
     }
-
   ]
 }
 

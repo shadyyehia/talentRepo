@@ -1,11 +1,11 @@
-<div class="modal fade" id="AddUserDialog" role="dialog">
+<div class="modal fade addmode" id="AddUserDialog" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header addNewDialogHeader">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h1 class="profileName">Add New Talent</h1>
+                <h4 class="profileName">Add New Talent</h4>
             </div>
             <form class="form-horizontal" id="formTalent1" data-toggle="validator" >
                 <div class="modal-body">
@@ -42,13 +42,13 @@
                         </div>
                     </div>
                     <div *ngIf="groups?.length > 0">
-                        <h3 >Suggested groups to join..</h3>
-                        <div *ngFor="let t of groups" class="searchUser rain searchUserInGroup" [id]="t.id">
+                        <h5 >Suggested groups to join..</h5>
+                        <div *ngFor="let t of groups" class="searchUser rain searchUserInGroup indialog" [id]="t.id">
                             <button type="button" class="glyphicon glyphicon-ok-circle addToGroup" [ngClass]="t.selected?'OkGreen':'OkBlack'" (click)="selectClicked($event,t)" title="Make it green and add the user to the group!"></button>
                             <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.logo + ') no-repeat'}">
                                 <div class="wrapper">
-                                    <h1 class="heading">{{t.name}}</h1>
-                                    <h3 class="location">({{t.memberCount}}) members</h3>                                   
+                                    <h5 class="heading">{{t.name}}</h5>
+                                    <h5 class="location">({{t.memberCount}}) members</h5>                                   
                                 </div>
                             </div>
                         </div>

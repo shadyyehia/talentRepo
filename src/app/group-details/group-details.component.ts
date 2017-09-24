@@ -53,5 +53,9 @@ export class GroupDetailsComponent implements OnInit, OnChanges {
     ngOnInit() {
         this.updateTalentsUI();
         $('#groupDetails').modal('show');
+        setTimeout(function () {
+             $("[data-toggle=popover]").popover();
+        }, 100)
+        
     }
 }

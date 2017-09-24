@@ -1,5 +1,5 @@
-<div *ngIf="talents?.length > 0" [@myAnimation2] id="talentsDd">
-    <h1 class="componentHeader" *ngIf="!filterStr"><span class="label label-info">All Talents</span></h1>
+<div  *ngIf="talents?.length > 0" [@myAnimation2] id="talentsDd">
+    <h3 class="componentHeader" *ngIf="!filterStr"><span class="label label-info">Talents</span></h3>
     <div class="containerDivv" id="containerDivv2" >
         <div *ngFor="let t of talents" class="searchUser rain searchUserInGroup" id="talentDiv_{{t.id}}">
             <button mwlConfirmationPopover
@@ -15,8 +15,8 @@
                     class="glyphicon glyphicon-remove-sign removeFromGroup" title="Remove Talent"></button>  
                 <div class="topp" [ngStyle]="{'background': 'url(../assets/img/' + t.picture + ') no-repeat'}">
                     <div class="wrapper">
-                        <h1 class="heading">{{t.name}}</h1>
-                        <h3 class="location">ID:{{t.id}}</h3>
+                        <h5 class="heading">{{t.name}}</h5>
+                        <h5 class="location">ID:{{t.id}}</h5>
                         <p class="temp">
                             <span class="temp-value">{{t.rating}}</span>
                             <img src="../assets/img/star3.png" class="starIcon">
