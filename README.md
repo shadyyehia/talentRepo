@@ -56,8 +56,8 @@ Before running the tests make sure you are serving the app via `ng serve`.<br />
 8- Validation: required fields will be heighlighted for form input.<br />
 9- Help tooltip.<br />
 10-In place Confirmation message before deleting talent/group.<br />
-11-Shaking title "Talent Expats" when you hover on it.
-11-Functionalitis can be bookmarked in the browser for later usage.<br />
+11-Shaking title "Talent Expats" when you hover on it.<br />
+12-Functionalitis can be bookmarked in the browser for later usage.<br />
    examples:<br />
    http://localhost:801/searchResult/actors --> redirects to search result of "actors" keyword<br />
    http://localhost:801/talents --> will dislay all talents<br />
