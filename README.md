@@ -5,7 +5,7 @@ By Shady Yahia
 
 ## For hosting the application on IIS, please do the following steps:
 
-1- Extract the "dist.zip" into a folder.<br />
+1- Extract the `dist.zip` into a folder.<br />
 2- Create new web site on IIS and make the physical path refers to the extracted folder distination.<br />
 3- give the web site an application pool with enough permissions to access all local files, let's say use account "Local System"<br />
 and then you can browse using the IIS web site.<br />
@@ -17,7 +17,7 @@ Please copy the image manually your self in assets/img folder. This part is hard
 ## For hosting the application on a light http-server, please do the following steps:
 
 1- Make sure that you have NodeJS installed on your machine.<br /> 
-2- Extract "dist.zip" into a folder and name it any name, Ex: "Folder1". <br />
+2- Extract `dist.zip` into a folder and name it any name, Ex: "Folder1". <br />
 3- Using CMD go to the location of the "Folder1". <br />
 4- Run `npm init` ,  then `npm install` to download package.json and basic node modules.
 4- Run  `npm install http-server -g`. <br />
@@ -28,7 +28,7 @@ Please copy the image manually your self in assets/img folder. This part is hard
 1- Copy all files in one folder, name it tlProject. <br />
 2- Open cmd and go to the folder, then Install angular Cli using : `npm install -g @angular/cli`.<br />
 2- Run `npm install` in the tlProject folder.<br />
-3- Run ng build in the same folder and make sure that build succeeded.<br />
+3- Run `ng build` in the same folder and make sure that build succeeded.<br />
 Note: If the build failed for missing package, you can install using `npm install <package>` <br />
 4- Run `ng serve -o` , Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<br />
 
