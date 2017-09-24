@@ -32,7 +32,21 @@ Please copy the image manually your self in assets/img folder. This part is hard
 Note: If the build failed for missing package, you can install using `npm install <package>` <br />
 4- Run `ng serve -o` , Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<br />
 
-## Features:
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.<br />
+
+
+## The Implemented Features:
 1- Welcome screen <br />
 2- Quick search for searching for talents and groups in the same search box.<br />
 3- All talents/groups can be displayed from the top navigation links.<br />
@@ -68,16 +82,3 @@ Note: If the build failed for missing package, you can install using `npm instal
 3- Upload Image functionality is not implemented, it just saves the name of the image to be retrieved later from assets/img <br/>
 ,so all images must be in assets/img to be displayed in the application.
 4- Check responsiveness for the confirmation message.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.<br />
