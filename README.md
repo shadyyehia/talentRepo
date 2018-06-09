@@ -1,5 +1,25 @@
 # TalentProject (TlProject)
 
+a web project for listing talents and organizing them in groups, the implemented features are as following :
+1- Welcome screen <br />
+2- Quick search for searching for talents and groups in the same search box.<br />
+3- All talents/groups can be displayed from the top navigation links.<br />
+4- Delete talent or a group.<br />
+5- Adding new talent or a group.<br />
+6- Validation: if a group has at least one talent , it can't be deleted.<br />
+7- Validatin: A new Group must have at least one talent before creating it.<br />
+8- Validation: required fields will be heighlighted for form input.<br />
+9- Help tooltip in dialogs.<br />
+10-In place confirmation message before deleting talent/group.<br />
+11-Shaking title "Talent Expats" when you hover on it.<br />
+12-Functionalities can be bookmarked in the browser for later usage.<br />
+   examples:<br />
+   http://localhost:801/searchResult/actors --> redirects to search result of "actors" keyword<br />
+   http://localhost:801/talents --> will dislay all talents<br />
+   http://localhost:801/groups --> will display all groups<br />
+( NOTE:  To make this feature works when you host on IIS , you must install URL rewrite )<br />
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1. 
 By Shady Yahia
 
@@ -46,24 +66,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 Before running the tests make sure you are serving the app via `ng serve`.<br />
 
 
-## The Implemented Features:
-1- Welcome screen <br />
-2- Quick search for searching for talents and groups in the same search box.<br />
-3- All talents/groups can be displayed from the top navigation links.<br />
-4- Delete talent or a group.<br />
-5- Adding new talent or a group.<br />
-6- Validation: if a group has at least one talent , it can't be deleted.<br />
-7- Validatin: A new Group must have at least one talent before creating it.<br />
-8- Validation: required fields will be heighlighted for form input.<br />
-9- Help tooltip in dialogs.<br />
-10-In place confirmation message before deleting talent/group.<br />
-11-Shaking title "Talent Expats" when you hover on it.<br />
-12-Functionalities can be bookmarked in the browser for later usage.<br />
-   examples:<br />
-   http://localhost:801/searchResult/actors --> redirects to search result of "actors" keyword<br />
-   http://localhost:801/talents --> will dislay all talents<br />
-   http://localhost:801/groups --> will display all groups<br />
-( NOTE:  To make this feature works when you host on IIS , you must install URL rewrite )<br />
+
 
 ## What's good about the application (technically):
 1- It is a master piece for Angular 2 along with Angular CLI frameworks.<br />
